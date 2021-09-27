@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Weather Project</title>
+    <meta charset="UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/6ba15016e0.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  </head>
+  <body>
+    <div class="container">
+      <div class="weather">
+        <form id="search-form">
+          <div class="row">
+              <div class="section-1">
+            <input
+              type="text"
+              placeholder="Input City"
+              autocomplete="off"
+              class="col-9 search"
+              id="city-input"
+            />
+            <input class="submit" type="submit" value="Search" class="col-3" />
+            </div>
+          </div>
+        </form>
+        <ul class="city-section">
+          <li id="city" class="city"></li>
+          <li id="time" class="day"></li>
+          <li id="description" class="description"></li>
+        </ul>
+        <div class="row">
+          <div class="col-6">
+          
+           <img id="icon" class="icon" src="https://ssl.gstatic.com/onebox/weather/64/rain_s_cloudy.png" alt="cloudy">
+            <span id="temperature" class="temperature"></span> 
+             <a href="#" id="celsius"  class="units active">°C</a> <span class="units">|</span>  <a href="#" id="fahrenheit" class="units">°F</a>
+          </div>
+          <div class="col-6">
+            <ul class="humidity-wind">
+          <li class="humidity">Humidity <span id="humidity"></span> %</li>
+              <li class="wind">Wind <span id="wind"></span> km/h</li>
+            </ul>
+          </div>
+        </div>
+        <div class="weather-tips">
+          <a class="healthy-tip" href="#">Healthy Weather Tips</a>
+          <!-- <span>      |</span> -->
+          <a class="trivial" href="#">Weather Trivial</a>
+          <!-- <span>      |</span> -->
+        </div>
+      </div>
+    </div>
+    <div class="source-div">
+      <a
+        class="source-link"
+        href="https://github.com/Nwakaego-Ego/weather-app"
+        target="_blank"
+        >Open-source code
+      </a>
+      <span class="source-name">by Nwakaego Glory Nwaekpe</span>
+    </div>
+     <script src="app.js"></script>
+  </body>
+</html>
