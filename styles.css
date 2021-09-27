@@ -123,6 +123,7 @@ src {
 
 a {
   text-decoration: none;
+  color: rgb(255, 233, 62);
 }
 
 .active {
@@ -183,7 +184,20 @@ a {
 .source-link {
   color: #817459;
   font-weight: 800;
+  /* border: 1px solid transparent;
+  box-shadow: 4px 4px 4px #202124;
+  border-radius: 10px;
+
+  background-color: rgb(255, 233, 62); */
 }
+
+/* .source-name {
+  border: 1px solid transparent;
+  box-shadow: 4px 4px 4px #202124;
+  border-radius: 10px;
+
+  background-color: rgb(255, 233, 62);
+} */
 
 .source-link:hover {
   color: black;
