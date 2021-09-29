@@ -41,32 +41,33 @@
         </ul>
         <div class="row col-row">
           <div class="col-6">
-          
-           <img id="icon" class="icon" src="https://ssl.gstatic.com/onebox/weather/64/rain_s_cloudy.png" alt="cloudy">
-            <span id="temperature" class="temperature"></span> 
-             <a href="#" id="celsius"  class="units active">°C</a> <span class="units">|</span>  <a href="#" id="fahrenheit" class="units">°F</a>
+             <img id="icon" class="icon" src="https://ssl.gstatic.com/onebox/weather/64/rain_s_cloudy.png" alt="cloudy">
+             <span id="temperature" class="temperature"></span> 
+              <a href="#" id="celsius"  class="units active">°C</a> <span class="units">|</span>  <a href="#" id="fahrenheit" class="units">°F</a>
           </div>
           <div class="col-6">
-            <ul class="humidity-wind">
-          <li class="humidity">Humidity <span id="humidity"></span> %</li>
-              <li class="wind">Wind <span id="wind"></span> km/h</li>
-            </ul>
+              <ul class="humidity-wind">
+                <li class="humidity">Humidity <span id="humidity"></span> %</li>
+                <li class="wind">Wind <span id="wind"></span> km/h</li>
+              </ul>
           </div>
         </div>
         <div class="weather-tips">
           <a class="healthy-tip" href="#">Healthy Weather Tips</a>
-          <!-- <span>      |</span> -->
           <a class="trivial" href="#">Weather Trivial</a>
-          <!-- <span>      |</span> -->
         </div>
-        <div class="row forecast-section">
-          <div class="col-2">
-            wed
-            <img class="forecast-image" src="https://ssl.gstatic.com/onebox/weather/64/rain_s_cloudy.png" alt="">
-           <span class="forecast-temperature">18 12</span> 
-          </div>
-        </div>
-
+        <div class="weather-forecast">
+          <div class="row">
+            <div class="col-2">
+                wed
+               <img class="weather-forecast-image" src="https://ssl.gstatic.com/onebox/weather/64/rain_s_cloudy.png" alt="">
+              <div class="weather-forecast-temperature">
+                <span class="weather-forecast-temperature-max">18</span> 
+                <span class="weather-forecast-temperature-min">12</span>
+              </div>
+           </div>
+         </div>
+      </div>
       </div>
     </div>
     <div class="source-div">
@@ -77,7 +78,7 @@
         >Open-source code
       </a>
       <span class="source-name">by Nwakaego Glory Nwaekpe</span>
-    </div>
+  </div>
      <script src="app.js"></script>
   </body>
 </html>
