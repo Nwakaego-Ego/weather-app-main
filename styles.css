@@ -138,7 +138,7 @@ a {
   /* text-decoration: none; */
 }
 .active:hover {
-  color: black;
+  color: rgb(247, 211, 211);
   cursor: url(CURSOR_URL), auto;
   /* text-decoration: underline; */
 }

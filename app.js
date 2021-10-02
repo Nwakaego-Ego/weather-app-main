@@ -98,4 +98,51 @@ function displayCelsius(event) {
 let displayCelsiusElement = document.querySelector("#celsius");
 displayCelsiusElement.addEventListener("click", displayCelsius);
 
+function weatherForecast() {
+  let forecastElement = document.querySelector("#weather-forecast");
+  let forecastHtml = ` <div class="row">`;
+  forecastHtml =
+    forecastHtml +
+    `      
+            <div class="col-2">
+                wed
+               <img class="weather-forecast-image" src="https://ssl.gstatic.com/onebox/weather/64/rain_s_cloudy.png" alt="">
+              <div class="weather-forecast-temperature">
+                <span class="weather-forecast-temperature-max">18</span> 
+                <span class="weather-forecast-temperature-min">12</span>
+              </div>
+           </div>
+         </div>`;
+  forecastElement.innerHTML = forecastHtml;
+  forecastHtml =
+    forecastHtml +
+    `     
+            <div class="col-2">
+                wed
+               <img class="weather-forecast-image" src="https://ssl.gstatic.com/onebox/weather/64/rain_s_cloudy.png" alt="">
+              <div class="weather-forecast-temperature">
+                <span class="weather-forecast-temperature-max">18</span> 
+                <span class="weather-forecast-temperature-min">12</span>
+              </div>
+           </div>
+         </div>`;
+  forecastHtml = forecastElement + `</div>`;
+  forecastElement.innerHTML = forecastHtml;
+}
 search("Nigeria");
+weatherForecast();
+
+// ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
+// forecastElement.forEach(function (forecast) {
+//     elementWeatherForecast.innerHTML = `
+//           <div class="row">
+//             <div class="col-2">
+//                 wed
+//                <img class="weather-forecast-image" src="https://ssl.gstatic.com/onebox/weather/64/rain_s_cloudy.png" alt="">
+//               <div class="weather-forecast-temperature">
+//                 <span class="weather-forecast-temperature-max">18</span>
+//                 <span class="weather-forecast-temperature-min">12</span>
+//               </div>
+//            </div>
+//          </div>`;
+//   });
