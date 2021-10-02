@@ -100,33 +100,24 @@ displayCelsiusElement.addEventListener("click", displayCelsius);
 
 function weatherForecast() {
   let forecastElement = document.querySelector("#weather-forecast");
-  let forecastHtml = ` <div class="row">`;
-  forecastHtml =
-    forecastHtml +
-    `      
+  let forecastHtml = `<div class="row">`;
+  let days = ["sun", "mon", "wed"];
+  days.forEach(function (week) {
+    forecastHtml =
+      forecastHtml +
+      `
             <div class="col-2">
-                wed
+                ${week}
                <img class="weather-forecast-image" src="https://ssl.gstatic.com/onebox/weather/64/rain_s_cloudy.png" alt="">
               <div class="weather-forecast-temperature">
                 <span class="weather-forecast-temperature-max">18</span> 
                 <span class="weather-forecast-temperature-min">12</span>
               </div>
            </div>
-         </div>`;
-  forecastElement.innerHTML = forecastHtml;
-  forecastHtml =
-    forecastHtml +
-    `     
-            <div class="col-2">
-                wed
-               <img class="weather-forecast-image" src="https://ssl.gstatic.com/onebox/weather/64/rain_s_cloudy.png" alt="">
-              <div class="weather-forecast-temperature">
-                <span class="weather-forecast-temperature-max">18</span> 
-                <span class="weather-forecast-temperature-min">12</span>
-              </div>
-           </div>
-         </div>`;
-  forecastHtml = forecastElement + `</div>`;
+           `;
+  });
+
+  forecastHtml = forecastHtml + `</div>`;
   forecastElement.innerHTML = forecastHtml;
 }
 search("Nigeria");
