@@ -23,6 +23,38 @@ function currentTime(timestamp) {
   return `${week} ${hour} : ${minutes}`;
 }
 
+function weatherForecast(response) {
+  console.log(response.data);
+  let forecastElement = document.querySelector("#weather-forecast");
+  let forecastHtml = `<div class="row">`;
+  let days = ["sun", "mon", "wed"];
+  days.forEach(function (week) {
+    forecastHtml =
+      forecastHtml +
+      `
+            <div class="col-2">
+                ${week}
+               <img class="weather-forecast-image" src="https://ssl.gstatic.com/onebox/weather/64/rain_s_cloudy.png" alt="">
+              <div class="weather-forecast-temperature">
+                <span class="weather-forecast-temperature-max">18</span> 
+                <span class="weather-forecast-temperature-min">12</span>
+              </div>
+           </div>
+           `;
+  });
+
+  forecastHtml = forecastHtml + `</div>`;
+  forecastElement.innerHTML = forecastHtml;
+}
+
+function getCurrentWeather(coordinates) {
+  console.log(coordinates);
+  let apiKey = "49d8a1330406cb9ac92bd472b6ff3770";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  console.log(apiUrl);
+  axios.get(apiUrl).then(weatherForecast);
+}
+
 function displayTemperature(response) {
   console.log(response.data);
   document.querySelector("#temperature").innerHTML = Math.round(
@@ -47,6 +79,8 @@ function displayTemperature(response) {
   );
 
   celsiusElement = Math.round(response.data.main.temp);
+
+  getCurrentWeather(response.data.coord);
 }
 
 function search(city) {
@@ -98,30 +132,7 @@ function displayCelsius(event) {
 let displayCelsiusElement = document.querySelector("#celsius");
 displayCelsiusElement.addEventListener("click", displayCelsius);
 
-function weatherForecast() {
-  let forecastElement = document.querySelector("#weather-forecast");
-  let forecastHtml = `<div class="row">`;
-  let days = ["sun", "mon", "wed"];
-  days.forEach(function (week) {
-    forecastHtml =
-      forecastHtml +
-      `
-            <div class="col-2">
-                ${week}
-               <img class="weather-forecast-image" src="https://ssl.gstatic.com/onebox/weather/64/rain_s_cloudy.png" alt="">
-              <div class="weather-forecast-temperature">
-                <span class="weather-forecast-temperature-max">18</span> 
-                <span class="weather-forecast-temperature-min">12</span>
-              </div>
-           </div>
-           `;
-  });
-
-  forecastHtml = forecastHtml + `</div>`;
-  forecastElement.innerHTML = forecastHtml;
-}
 search("Nigeria");
-weatherForecast();
 
 // ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
 // forecastElement.forEach(function (forecast) {
