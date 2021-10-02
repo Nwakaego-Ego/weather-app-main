@@ -24,23 +24,24 @@ function currentTime(timestamp) {
 }
 
 function weatherForecast(response) {
-  console.log(response.data);
+  console.log(response.data.daily);
+  let forecast = response.data.daily;
   let forecastElement = document.querySelector("#weather-forecast");
+
   let forecastHtml = `<div class="row">`;
-  let days = ["sun", "mon", "wed"];
-  days.forEach(function (week) {
+  forecast.forEach(function (forecastDay) {
     forecastHtml =
       forecastHtml +
       `
-            <div class="col-2">
-                ${week}
-               <img class="weather-forecast-image" src="https://ssl.gstatic.com/onebox/weather/64/rain_s_cloudy.png" alt="">
-              <div class="weather-forecast-temperature">
-                <span class="weather-forecast-temperature-max">18</span> 
-                <span class="weather-forecast-temperature-min">12</span>
-              </div>
-           </div>
-           `;
+      <div class="col-2">
+                ${forecastDay.dt}
+                <img class="weather-forecast-image" src="https://ssl.gstatic.com/onebox/weather/64/rain_s_cloudy.png" alt="">
+                <div class="weather-forecast-temperature">
+                <span class="weather-forecast-temperature-max">${forecastDay.temp.max}</span> 
+                <span class="weather-forecast-temperature-min">${forecastDay.temp.min}</span>
+                </div>
+                </div>
+                `;
   });
 
   forecastHtml = forecastHtml + `</div>`;
@@ -148,3 +149,5 @@ search("Nigeria");
 //            </div>
 //          </div>`;
 //   });
+
+// currentWeatherForeCast = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
