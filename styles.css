@@ -99,8 +99,35 @@ li {
   color: rgb(255, 233, 62);
 }
 
+.week-day {
+  width: 70px;
+  background-color: yellow;
+}
+
+img .icon-image {
+  margin-right: 20px;
+}
+
+.icon-image {
+  margin: 0;
+  position: relative;
+  right: 23px;
+  color: rgb(255, 233, 62);
+  /* width: 60px; */
+}
+
+.col-2 {
+  border: 1px solid transparent;
+  box-shadow: 4px 4px 4px #202124;
+  border-radius: 10px;
+
+  background-color: rgb(255, 233, 62);
+  margin: 10px;
+}
+
 src {
   color: rgb(255, 233, 62);
+  position: relative;
 }
 
 .temperature {
@@ -194,17 +221,28 @@ a {
 .weather-forecast-image {
   margin-top: 5px;
   margin-bottom: 2px;
+  /* margin-right: 30px; */
+  width: 70px;
 }
 
 .forecast-temperature {
   margin-bottom: 5px;
 }
 
+.source-div {
+  right: 20px;
+}
+
 .source-link {
-  color: #817459;
+  /* color: #817459; */
+  color: rgb(255, 233, 62);
   font-weight: 800;
 }
 
 .source-link:hover {
   color: black;
+}
+
+.source-name {
+  color: rgb(1, 203, 243);
 }

@@ -26,7 +26,7 @@ function currentTime(timestamp) {
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
 
-  let day = ["Sat", "Sun", "Mon", "Tue", "Wed", "Thu", "Fri"];
+  let day = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
   let days = day[date.getDay()];
 
@@ -40,13 +40,13 @@ function weatherForecast(response) {
 
   let forecastHtml = `<div class="row">`;
   forecast.forEach(function (forecastDay, index) {
-    if (index < 6) {
+    if (index < 5) {
       forecastHtml =
         forecastHtml +
         `
-      <div class="col-2">
+      <div class="col-2 ">
                 ${formatDay(forecastDay.dt)}
-                <img class="weather-forecast-image" src="https://openweathermap.org/img/wn/${
+                <img  class="icon-image class="weather-forecast-image" src="https://openweathermap.org/img/wn/${
                   forecastDay.weather[0].icon
                 }@2x.png" alt="">
                 <div class="weather-forecast-temperature">
