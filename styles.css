@@ -210,7 +210,7 @@ a {
   color: #515151;
   font-weight: 900;
   /* width: 50%; */
-  margin-left: 270px;
+  margin-left: 340px;
   background-color: #202124;
 }
 
@@ -230,7 +230,9 @@ a {
 }
 
 .source-div {
+  position: relative;
   right: 20px;
+  /* width: 70%; */
 }
 
 .source-link {
