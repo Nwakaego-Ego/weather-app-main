@@ -40,11 +40,11 @@ body {
   border-radius: 10px;
   border: 1px solid transparent;
   cursor: pointer;
-  box-shadow: 4px 4px 4px #515358;
+  box-shadow: 4px 4px 4px #4d4d4e;
   margin: 15px;
   background-color: rgb(255, 233, 62);
   position: relative;
-  right: 50px;
+  left: 50px;
 
   color: #202124;
   font-weight: 600;
@@ -74,6 +74,7 @@ li {
   color: rgb(1, 203, 243);
   background-color: rgb(255, 233, 62);
   margin: 5px;
+  font-weight: 500;
 }
 
 .day {
@@ -85,6 +86,7 @@ li {
   background-color: rgb(255, 233, 62);
   margin: 5px;
   color: rgb(1, 203, 243);
+  font-weight: 500;
 }
 
 .description {
@@ -96,11 +98,13 @@ li {
   color: rgb(1, 203, 243);
   background-color: rgb(255, 233, 62);
   margin: 5px;
+  font-weight: 500;
   /* text-align: center; */
 }
 
 .weather-day {
   color: rgb(1, 203, 243);
+  font-weight: bold;
 }
 
 .icon {
@@ -147,6 +151,10 @@ src {
   font-size: 50px;
 }
 
+.weather-forecast-temperature {
+  font-weight: 500;
+}
+
 .units {
   position: relative;
   top: -30px;
@@ -164,6 +172,11 @@ src {
   position: relative;
   top: 10px;
   color: black;
+  margin-left: 50px;
+  font-weight: 500;
+}
+
+.temperature {
   margin-left: 10px;
 }
 
@@ -178,7 +191,7 @@ a {
   /* text-decoration: none; */
 }
 .active:hover {
-  color: rgb(247, 211, 211);
+  color: black;
   cursor: url(CURSOR_URL), auto;
   /* text-decoration: underline; */
 }
@@ -217,16 +230,6 @@ a {
   color: black;
 }
 
-.source-div {
-  display: block;
-  margin: 0 auto;
-  color: #515151;
-  font-weight: 900;
-  /* width: 50%; */
-  margin-left: 340px;
-  background-color: #202124;
-}
-
 .weather-forecast {
   margin-top: 10px;
 }
@@ -241,11 +244,19 @@ a {
 .forecast-temperature {
   margin-bottom: 5px;
 }
+.source-div {
+  display: block;
+  margin: 0 auto;
+  color: #515151;
+  font-weight: 900;
+  /* width: 50%; */
+  margin-left: 300px;
+  background-color: #202124;
+}
 
 .source-link {
   /* color: #817459; */
   color: rgb(255, 233, 62);
-  font-weight: 800;
 }
 
 .source-link:hover {
